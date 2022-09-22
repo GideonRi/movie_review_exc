@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hopeThisWorks", "hopeThisWorks\hopeThisWorks.csproj", "{C3639E90-CB1F-4702-B5F7-0969DF555324}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3639E90-CB1F-4702-B5F7-0969DF555324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3639E90-CB1F-4702-B5F7-0969DF555324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3639E90-CB1F-4702-B5F7-0969DF555324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3639E90-CB1F-4702-B5F7-0969DF555324}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89A82DBE-5D92-4196-B27D-B0E7C4B1DC4F}
+	EndGlobalSection
+EndGlobal

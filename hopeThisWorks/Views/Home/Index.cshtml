@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div-->
+
+    <form id="formId">
+        <label for="name">Insert Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="textveld">this text will change if the button is pressed</p>
+    <p id="scoreveld">and the avarage score will be displayed here</p>
+
+    <form id="reviewForm">
+        <label for="name">give score / 100:</label><br>
+        <input type="text" id="value" name="value"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+<script>
+
+    document.getElementById("formId").addEventListener("submit", display);
+    document.getElementById("reviewForm").addEventListener("submit", postReview);
+
+    function display(event) {
+        event.preventDefault();
+        var movieName = document.getElementById("name").value;
+        fetch('/indexRoute?name=' + movieName)
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById("textveld").innerText = data.title;
+            });
+        fetch('/avarageRoute?name=' + movieName)
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById("scoreveld").innerText = "Avarge score: " + data;
+            });
+    }
+
+    function postReview(event) {
+        debugger;
+        event.preventDefault();
+        var reviewValue = document.getElementById("value").value;
+        var movieName = document.getElementById("name").value;
+        fetch('/postReviewRoute?value=' + reviewValue + '&name=' + movieName, {method: 'POST'})
+            
+            .then((resonse) => resonse.json())
+            .then((data) => {
+                document.getElementById("scoreveld").innerText = "uploaded succesfully";
+            });
+
+    }
+</script>
